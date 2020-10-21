@@ -12,14 +12,17 @@ using std::endl;
 int main()
 {
     {
-        unsigned int decimal, decimalHex, temp, hex = 0;
+        unsigned int decimal, decimalHex;
         unsigned long long binary = 0, i;
+
+        char hex[50];
+        int hexCounter = 0;
 
         cout << "Enter decimal number:";
         cin >> decimal;
+
         decimalHex = decimal;
         i = 1;
-        cout << "The hexadecimal representation is: ";
 
         // Hexadecimal
         do
@@ -28,12 +31,18 @@ int main()
             decimalHex /= 16;
 
             if (rem > 9)
-                cout << (char)(rem - 10 + 'A');
+                hex[hexCounter] = (char)(rem - 10 + 'A');
             else
-                cout << rem;
+                hex[hexCounter] = (char)(rem + 48);
+
+            hexCounter++;
         } while (decimalHex > 0);
 
-        cout << '\n';
+        cout << "The hexadecimal representation is: ";
+        for (int i = hexCounter; i >= 0; i--)
+        {
+            cout << hex[i];
+        }
 
         // Binary
         do
@@ -43,6 +52,6 @@ int main()
             decimal = decimal / 2;
         } while (decimal > 0);
 
-        cout << "the binary representation is: " << binary;
+        cout << "\nThe binary representation is: " << binary;
     }
 }

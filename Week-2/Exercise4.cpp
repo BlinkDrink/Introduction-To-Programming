@@ -13,20 +13,23 @@ int main()
     int year;
     std::cin >> year;
 
-    if (year % 4 == 0)
-    {
-        if (year % 100 == 0)
-        {
-            if (year % 400 == 0)
-                cout << "true";
-            else
-                cout << "false";
-        }
-        else
-            cout << "true";
-    }
-    else
-        cout << "false";
+    // if (year % 4 == 0)
+    // {
+    //     if (year % 100 == 0)
+    //     {
+    //         if (year % 400 == 0)
+    //             cout << "true";
+    //         else
+    //             cout << "false";
+    //     }
+    //     else
+    //         cout << "true";
+    // }
+    // else
+    //     cout << "false";
+
+    bool isLeap = (year % 4 == 0 && (year % 100 != 0 || (year % 100 == 0 && year % 400 == 0)));
+    cout << "Is leap: " << isLeap;
 
     return 0;
 }
