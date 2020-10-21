@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+BonusExercise.cpp
+
+# Folders
+.vscode
+
 # Compiled Object files
 *.slo
 *.lo
