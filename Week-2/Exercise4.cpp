@@ -28,7 +28,7 @@ int main()
     // else
     //     cout << "false";
 
-    bool isLeap = (year % 4 == 0 && (year % 100 != 0 || (year % 100 == 0 && year % 400 == 0)));
+    bool isLeap = ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0));
     cout << "Is leap: " << isLeap;
 
     return 0;
