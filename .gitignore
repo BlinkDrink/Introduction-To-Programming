@@ -2,6 +2,7 @@
 *.d
 
 BonusExercise.cpp
+ed.cpp
 
 # Folders
 .vscode
