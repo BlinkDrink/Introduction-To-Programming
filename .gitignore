@@ -2,7 +2,7 @@
 *.d
 
 BonusExercise.cpp
-ed.cpp
+switchExample.cpp
 
 # Folders
 .vscode

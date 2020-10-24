@@ -7,15 +7,13 @@
 
 int main()
 {
+    int grade;
+    std::cin >> grade;
+
+    for (int i = 0; i < 3; i++)
     {
-        int grade;
-        std::cin >> grade;
-
-        for (int i = 0; i < 3; i++)
-        {
-            grade = (-(~grade));
-        }
-
-        std::cout << grade;
+        grade = (-(~grade));
     }
+
+    std::cout << grade;
 }
