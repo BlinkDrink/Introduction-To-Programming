@@ -24,6 +24,7 @@ int main()
     mask = mask << 1 | 1;
     mask = mask << 1 | 1;
     mask = mask << 1 | 1;
+    cout << mask;
 
     cout << (mask & num) << ' ';
 
