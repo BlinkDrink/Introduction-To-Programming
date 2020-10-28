@@ -22,22 +22,13 @@ int main()
     unsigned int num;
     cin >> num;
 
-    unsigned int mask = 1;
-    for (int i = 1; i < BITS_TO_MOVE; i++)
+    unsigned int mask = 255; // 1111 1111 in bits
+
+    for (int i = 0; i < 4; i++)
     {
-        mask = mask << 1 | 1;
+        cout << (num & mask) << " ";
+        num >>= BITS_TO_MOVE;
     }
-
-    cout << (num & mask) << endl;
-
-    num >>= BITS_TO_MOVE;
-    cout << (num & mask) << endl;
-
-    num >>= BITS_TO_MOVE;
-    cout << (num & mask) << endl;
-
-    num >>= BITS_TO_MOVE;
-    cout << (num & mask) << endl;
 
     return 0;
 }
