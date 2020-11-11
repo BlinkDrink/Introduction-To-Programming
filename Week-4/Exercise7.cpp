@@ -16,7 +16,6 @@ int main()
     cin >> n;
 
     unsigned nBinary = 0;
-    unsigned nBinaryReversed = 0;
 
     while (n != 0)
     {
