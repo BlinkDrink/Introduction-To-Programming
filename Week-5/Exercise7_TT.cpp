@@ -27,12 +27,15 @@ bool sumOfDigitsIsPrime(int n) {
 }
 
 int main() {
-	unsigned int m, n;
+	unsigned int m, n, c = 0;
 	cin >> m >> n;
 	if (m >= n) return -1;
 	for (int i = m; i <= n; i++) {
-		if (sumOfDigitsIsPrime(i)) cout << i << ' ';
+		if (sumOfDigitsIsPrime(i)) {
+//			cout << i << endl;
+			c++;
+		}
 	}
-	cout << endl;
+	cout << c << endl;
 	return 0;
 }
