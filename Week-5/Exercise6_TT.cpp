@@ -2,6 +2,13 @@
 #include <cmath>
 using namespace std;
 
+/*
+Напишете булева функция, която приема цяло, положително число n и връща
+true ако сумата от цифрите на n е просто число, false в противен случай. Сигнатура на функцията:
+
+bool sumOfDigitsIsPrime(int n)
+*/
+
 bool isPrime(int n) {
 	if (!(n & 1)) return false;
 	int lim = sqrt(n);

@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+*Задача 5
+Да се изведат първите 20 естествени числа, двоичния запис на които съдържа равен брой 0 и 1.
+*/
 bool isEligible(unsigned int i) {
 //	if (i == 0) return false;
 
