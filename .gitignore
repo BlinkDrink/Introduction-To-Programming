@@ -6,6 +6,7 @@ switchExample.cpp
 
 # Folders
 .vscode
+.idea
 
 # Compiled Object files
 *.slo
@@ -36,3 +37,10 @@ switchExample.cpp
 *.exe
 *.out
 *.app
+
+# CMake
+cmake-build-debug
+cmake-build-default
+cmake-build-default-cygwin
+CMakeLists.txt
+/main.cpp
