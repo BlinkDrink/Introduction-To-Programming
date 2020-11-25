@@ -9,8 +9,8 @@ switchExample.cpp
 *.zip
 
 # Folders
-.vscode
-.idea
+*.vscode
+*.idea
 
 # Compiled Object files
 *.slo
