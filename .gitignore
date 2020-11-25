@@ -4,6 +4,10 @@
 BonusExercise.cpp
 switchExample.cpp
 
+# Documents
+*.pdf
+*.zip
+
 # Folders
 .vscode
 .idea
