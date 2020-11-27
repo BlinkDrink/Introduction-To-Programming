@@ -40,10 +40,59 @@ void read2DArray(int arr[][MAX_SIZE], size_t N)
             cin >> arr[i][j];
 }
 
+bool IsNotRepeating(int arr[], int n)
+{
+    for (int i = 0; i < n * n; i++)
+    {
+        for (int j = i + 1; j < n * n; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool IsContaining(int arr[], int helpArr[], int n)
+{
+    for (int i = 0; i < n * n; i++)
+    {
+        bool contains = false;
+        for (int j = 0; j < n * n; j++)
+        {
+            if (arr[i] == helpArr[j])
+            {
+                contains = true;
+                break;
+            }
+        }
+        if (!contains)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool isMagicSquare(int arr[][MAX_SIZE], size_t N, int sum)
 {
     int mainDiagSum = 0;
     int secondaryDiagSum = 0;
+    int straightArr[MAX_SIZE];
+    int straightArrIndex = 0;
+    int helperArr[MAX_SIZE];
+    int helpArrIndex = 0;
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            helperArr[helpArrIndex++] = helpArrIndex;
+            straightArr[straightArrIndex++] = arr[i][j];
+        }
+    }
 
     for (size_t i = 0; i < N; i++)
     {
@@ -86,10 +135,7 @@ bool isMagicSquare(int arr[][MAX_SIZE], size_t N, int sum)
         }
     }
 
-    if (mainDiagSum != sum)
-        return false;
-
-    if (secondaryDiagSum != sum)
+    if (mainDiagSum != sum || secondaryDiagSum != sum || (!IsNotRepeating(straightArr, N) || !IsContaining(straightArr, helperArr, N)))
         return false;
 
     return true;

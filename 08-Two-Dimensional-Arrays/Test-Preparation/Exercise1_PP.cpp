@@ -74,4 +74,6 @@ int main()
     int indexMostRepeated = indexOfMostRepeated(mapRepeatedValues, numberOfDigits);
     cout << mapDigitKeys[indexMostRepeated] << endl
          << mapRepeatedValues[indexMostRepeated];
+
+    return 0;
 }

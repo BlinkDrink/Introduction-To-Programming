@@ -41,4 +41,6 @@ int main()
 
     reverseArr(arr, n);
     printArr(arr, n);
+
+    return 0;
 }

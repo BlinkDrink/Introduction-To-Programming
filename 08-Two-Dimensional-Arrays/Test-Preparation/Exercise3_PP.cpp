@@ -38,4 +38,6 @@ int main()
     }
 
     isPrime ? cout << "TRUE" : cout << "FALSE";
+
+    return 0;
 }
