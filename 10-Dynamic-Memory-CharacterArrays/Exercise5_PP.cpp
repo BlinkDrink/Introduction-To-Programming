@@ -54,6 +54,7 @@ int cyclical_palindrome(const char *str)
 
         if (isPalindrome(reformed))
         {
+            delete[] reformed;
             return pos - 1;
         }
 
