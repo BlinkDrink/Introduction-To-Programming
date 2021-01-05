@@ -24,7 +24,7 @@ char *reverse_words(char *str)
 
         str--;
 
-        while (str >= pHelper)
+        while (str > pHelper)
         {
             swap(*str, *pHelper);
             str--;
@@ -45,7 +45,8 @@ char *reverse_words(char *str)
 
 int main()
 {
-    char sentence[100]{"Turn that frown upside down :("};
+    char sentence[100];
+    cin.getline(sentence, 100);
     std::cout << reverse_words(sentence); // nruT taht nworf edispu nwod (:
     return 0;
 }

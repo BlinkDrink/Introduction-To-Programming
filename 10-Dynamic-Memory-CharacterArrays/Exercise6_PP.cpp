@@ -68,7 +68,7 @@ main()
         {'a', 'k', 'e', 'r'},
     };
 
-    cout << std::boolalpha << can_read_word(table, 4, "aaar") << '\n';
+    cout << std::boolalpha << can_read_word(table, 4, "kappa") << '\n';
     // true, start at [3,1] and go up-right, up-right, up-left, down-left
     return 0;
 }
