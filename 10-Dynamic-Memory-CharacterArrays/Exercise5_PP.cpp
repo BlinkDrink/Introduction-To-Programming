@@ -26,7 +26,7 @@ bool isPalindrome(const char *str)
     return true;
 }
 
-int cyclical_palindrome(const char *str)
+size_t cyclical_palindrome(const char *str)
 {
     size_t idx = 0;
     size_t pos = 0;
@@ -54,10 +54,12 @@ int cyclical_palindrome(const char *str)
 
         if (isPalindrome(reformed))
         {
+            delete[] reformed;
             return pos - 1;
         }
 
-        pHelper = ++str;
+        str++;
+        pHelper = str;
         pSecondHelper = strStart;
         idx = 0;
     }
