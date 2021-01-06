@@ -4,19 +4,19 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-unsigned fib(unsigned n, unsigned f1, unsigned f2, unsigned result = 0)
+unsigned long long fibRec(unsigned n, unsigned long long f1, unsigned long long f2)
 {
-    if (n == 1)
+    if (n == 0)
     {
-        return result;
+        return f2;
     }
 
-    return fib(n - 1, f2, f2 + f1, f1 + f2);
+    return fibRec(n - 1, f2, f1 + f2);
 }
 
-unsigned fibWrapper(unsigned n)
+unsigned long long fibWrapper(unsigned n)
 {
-    return fib(n, 0, 1);
+    return fibRec(n, 0, 1);
 }
 
 int main()
